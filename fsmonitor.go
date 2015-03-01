@@ -98,3 +98,7 @@ func (self *Watcher) addWatcher(path string) (err error) {
 	err = self.watcher.Watch(path)
 	return
 }
+
+func (self *Watcher) Close() error {
+	return self.watcher.Close()
+}
